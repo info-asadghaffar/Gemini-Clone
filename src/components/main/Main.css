@@ -1,0 +1,186 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100svh;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+    flex-wrap: wrap; /* Prevent overflow on smaller screens */
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main .main-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px; /* Add padding for smaller screens */
+    box-sizing: border-box;
+}
+
+.main .greet {
+    margin: 50px 0px;
+    font-size: 48px; /* Slightly reduced for better scaling */
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center; /* Center text on smaller screens */
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main .card {
+    min-height: 180px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #585858;
+    font-size: 16px;
+}
+
+.main .card:hover {
+    background-color: #dfe4ea;
+}
+
+.main-bottom {
+    position: relative; /* Changed from absolute to fix collapse on short viewports */
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: 30px auto 10px auto; /* Extra space before footer */
+    box-sizing: border-box;
+}
+
+.main-bottom .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    flex-wrap: wrap; /* Prevent breaking on narrow screens */
+}
+
+.search-box img {
+    cursor: pointer;
+    width: 24px;
+}
+
+.search-box input {
+    padding: 8px;
+    flex: 1;
+    min-width: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.result{
+    padding: 0% 5%;
+    max-height: 70svh;
+    overflow-y: scroll;
+}
+.result::-webkit-scrollbar{
+    display: none;
+}
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
