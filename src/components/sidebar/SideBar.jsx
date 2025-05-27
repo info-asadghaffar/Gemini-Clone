@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import "./sideBar.css"
+import "./SideBar.css"
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
 
