@@ -9,7 +9,7 @@ import {
   
   async function main(prompt) {
     const ai = new GoogleGenAI({
-      apiKey: "AIzaSyBqv2mQjduADGBRRwJqHRmxAamw2_PnExQ",
+      apiKey: process.env.Gemini_Api_Key,
     });
     const config = {
       responseMimeType: 'text/plain',
