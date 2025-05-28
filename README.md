@@ -1,4 +1,4 @@
-# This is Gemini Clone Developed By Asad Ghaffar
+# This is Gemini Clone Developed By Asad Ghaffar https://github.com/info-asadghaffar/
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
